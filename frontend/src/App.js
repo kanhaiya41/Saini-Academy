@@ -19,7 +19,7 @@ function App() {
     e.preventDefault();
     try {
       setLoading(true);
-      const res = await axios.post('http://localhost:8000/user/contact', { name, email, clas, msj });
+      const res = await axios.post('https://saini-academy.onrender.com/user/contact', { name, email, clas, msj });
       if (res?.data?.success) {
         toast.success(res?.data?.message);
         setClas('');

@@ -40,7 +40,7 @@ const Admission = () => {
             data?.append('address', input?.address);
             data?.append('gred', gred);
             data.append('pic', pic);
-            const res = await axios.post('http://localhost:8000/user/admission', data);
+            const res = await axios.post('https://saini-academy.onrender.com/user/admission', data);
             if (res?.data?.success) {
                 toast.success(res?.data?.message);
                 setInput({

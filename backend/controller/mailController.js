@@ -50,7 +50,7 @@ export const adminssionForm = async (req, res) => {
         if (!name || !email || !number1 || !number2 || !clas || !gred) {
             return res.status(400).json('something is missing! Please cheack');
         }
-        const imgUrl = `http://localhost:8000/file/${req.file.originalname}`;
+        const imgUrl = `https://saini-academy.onrender.com/file/${req.file.originalname}`;
         const data = await Admissions({ name, email, number1, number2, clas, gred, pic: imgUrl });
         const ad = await data.save();
         if (ad) {
